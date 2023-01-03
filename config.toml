@@ -85,7 +85,7 @@ googleAnalytics = "UA-108392944-2"
 	# Contact section
 	[params.contact]
 		headline = "<img src='img/logo.png' id='contact_header' style='height:80%;width:80%;'></img>"
-		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2019"
+		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2023"
 		phone = "+1 888-676-6510 (Toll-Free)"
 		email = "info@firstamericanhomeloans.com"
 
