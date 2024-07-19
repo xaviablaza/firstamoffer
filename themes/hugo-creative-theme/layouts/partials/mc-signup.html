@@ -4,10 +4,9 @@
 #mc_embed_signup input {color: black;}
 </style>
 <div id="mc_embed_signup">
-  <form action="https://formkeep.com/f/3beb3876f970"
-        accept-charset="UTF-8"
+  <form accept-charset="UTF-8"
         enctype="multipart/form-data"
-        method="POST">
+        id="form">
     <div id="mc_embed_signup_scroll">
       <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
       <div class="mc-field-group">
@@ -27,3 +26,25 @@
     </div>
   </form>
 </div>
+
+<script>
+   const form = document.querySelector("#form")
+   const submitButton = document.querySelector("#mc-embedded-subscribe")
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbzGAsYfuAy8O67IMT5jyq7kWGKRU9sEKl5c_syb5VIw-4fmrs9YOF1xHgCReaQXHXoM/exec'
+
+   form.addEventListener('submit', e => {
+     submitButton.disabled = true
+     e.preventDefault()
+     let requestBody = new FormData(form)
+     fetch(scriptURL, { method: 'POST', body: requestBody})
+       .then(response => {
+          alert('Your response has been recorded.', response)
+          submitButton.disabled = false
+         })
+       .catch(error => {
+       alert('Error!', error.message)
+         submitButton.disabled = false
+       }
+       )
+   })
+</script>
